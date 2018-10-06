@@ -1,0 +1,56 @@
+@import 'reset';
+
+body {
+  // min-width: 550px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  .navbarHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: pink;
+    font-size: 20pt;
+    .header {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .navbarCategories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    .item {
+      border-width: 1px;
+      border-style: solid;
+      border-color: lightgrey;
+      text-align: center;
+      width: 300px;
+      padding-top: 10px;
+      &:hover {
+        background-color: greenyellow;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .lemonDiv {
+    display: none;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+  .navbarCategories {
+    font-family: fantasy;
+    font-size: 9pt;
+  }
+}
